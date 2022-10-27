@@ -1,0 +1,9 @@
+{
+  "name": "web-animations",
+  "version": "1.0.0",
+  "description": "Simple webpage animation with JS from tutorials, blogs and articles",
+  "repository": "https://github.com/Nischal2015/web-animations",
+  "author": "Nischal Shakya <nischalshakya2015@gmail.com>",
+  "license": "MIT",
+  "private": false
+}
