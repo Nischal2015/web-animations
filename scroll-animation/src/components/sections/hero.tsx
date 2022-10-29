@@ -64,8 +64,8 @@ const HeroContentSubHeadingContainer = styled(motion.div)({
 const HeroButtonSpan = styled.span({
   display: "block",
   "& img": {
-    width: "85%",
-    height: "85%",
+    width: "100%",
+    height: "100%",
     marginTop: "2px",
     opacity: "0.8",
   },
@@ -73,10 +73,10 @@ const HeroButtonSpan = styled.span({
 
 export default function Hero() {
   const ref = useRef<HTMLDivElement>(null);
-  const { scrollY, scrollYProgress } = useScroll({
+  const { scrollY } = useScroll({
     target: ref,
   });
-  const y = useParallax(scrollYProgress, scrollY);
+  const y = useParallax(scrollY);
 
   return (
     <SectionHero ref={ref}>
@@ -159,7 +159,6 @@ export default function Hero() {
           </motion.div>
         </Container>
       </HeroContentContainer>
-      <div style={{ height: "3000px" }} />
     </SectionHero>
   );
 }
