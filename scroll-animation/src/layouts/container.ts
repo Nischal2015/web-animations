@@ -1,11 +1,16 @@
 import styled from "@emotion/styled";
 
-export const Container = styled.div({
-  maxWidth: "140rem",
+const ContainerBase = styled.div({
   margin: "0 auto",
 });
 
-export const NavBarContainer = styled(Container)({
+export const Container = styled(ContainerBase)({
+  maxWidth: "115rem",
+  padding: "0 22rem",
+});
+
+export const NavBarContainer = styled(ContainerBase)({
+  maxWidth: "140rem",
   padding: "5rem 0 0",
   display: "block",
   position: "absolute",

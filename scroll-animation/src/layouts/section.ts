@@ -5,3 +5,11 @@ export const SectionHero = styled.section({
   height: "75.5vw",
   maxHeight: "200rem",
 });
+
+export const Section = styled.section<{
+  background?: "primary" | "secondary" | "tertiary";
+}>((props) => ({
+  backgroundColor: props.background
+    ? props.theme.background[props.background]
+    : props.theme.background.primary,
+}));

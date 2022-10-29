@@ -29,9 +29,9 @@ export const theme: Theme = {
     defaultMd: "4rem",
     defaultLg: "4.8rem",
 
-    small: "0.8rem",
+    smallest: "0.8rem",
     smaller: "1.6rem",
-    smallest: "2.4rem",
+    small: "2.4rem",
   },
   borderRadius: {
     large: "16px",
