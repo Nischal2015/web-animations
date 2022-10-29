@@ -1,3 +1,5 @@
-export { Container } from "./container";
+export * from "./container";
 
 export { default as Navbar } from "./navbar";
+
+export * from "./section";
