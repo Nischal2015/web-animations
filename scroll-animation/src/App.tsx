@@ -1,6 +1,5 @@
 import { Navbar } from "./layouts";
 import { Hero } from "./components";
-import "./App.css";
 
 function App() {
   return (
