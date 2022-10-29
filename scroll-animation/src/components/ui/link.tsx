@@ -13,7 +13,7 @@ const StyledLink = styled.a<LinkProps>(
     textDecoration: "none",
     display: "inline-block",
     fontSize: "1.8rem",
-    fontWeight: "500",
+    fontWeight: "600",
     position: "relative",
     transition: "200ms all ease-in-out",
   },

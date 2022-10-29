@@ -2,22 +2,17 @@ import logo from "../assets/navbar/logo_white.svg";
 import search from "../assets/navbar/search.svg";
 import styled from "@emotion/styled";
 import { Link } from "../components";
-import { Container } from "./container";
+import { NavBarContainer } from "./container";
 
 type SpanStyleProps = {
   height?: number;
   width?: number;
 };
 
-const StyledDiv = styled.div(
-  {
-    display: "flex",
-    alignItems: "center",
-  },
-  (props) => ({
-    background: props.theme.background.primary,
-  })
-);
+const StyledDiv = styled.div({
+  display: "flex",
+  alignItems: "center",
+});
 
 const StyledNavbar = styled.nav(
   {
@@ -69,7 +64,7 @@ const StyledMainNav = styled.div(
 
 export default function Navbar() {
   return (
-    <Container style={{ padding: "5rem 0 0" }}>
+    <NavBarContainer>
       <StyledDiv>
         <StyledSpan width={149} height={40}>
           <img src={logo} alt='sleepiest logo' />
@@ -94,6 +89,6 @@ export default function Navbar() {
           </StyledSpan>
         </StyledNavbar>
       </StyledDiv>
-    </Container>
+    </NavBarContainer>
   );
 }

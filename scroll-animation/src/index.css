@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 
 :root {
   --text-dark: #868e96;
@@ -24,11 +24,19 @@ html {
 body {
   box-sizing: inherit;
   line-height: 1;
-  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  font-size: 8rem;
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -2px;
+  word-spacing: 2px;
 }
 
 h2 {
-  font-size: 1.8rem;
+  font-size: 3.4rem;
   line-height: 1.2;
-  font-weight: 600;
+  font-weight: 500;
 }
