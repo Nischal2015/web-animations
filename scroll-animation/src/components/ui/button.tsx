@@ -10,10 +10,13 @@ type ButtonProps = {
 const StyledButton = styled.button<ButtonProps>(
   {
     display: "inline-block",
-    width: "19.7rem",
-    height: "7rem",
     border: "none",
     cursor: "pointer",
+    fontWeight: 600,
+    color: "#fff",
+    fontSize: "1.8rem",
+    height: "7rem",
+    padding: "0 3.5rem",
   },
   (props) => {
     const {
@@ -21,14 +24,38 @@ const StyledButton = styled.button<ButtonProps>(
       borderRadius,
     } = props.theme;
 
-    return {
-      borderRadius: borderRadius.large,
+    const bgColor = {
       backgroundColor:
         props.color === "primary"
           ? primary
           : props.color === "secondary"
           ? secondary
           : white,
+    };
+
+    if (props.size === "large") {
+      return {
+        borderRadius: borderRadius.large,
+        fontSize: "2rem",
+        width: "19.7rem",
+        height: "7rem",
+        ...bgColor,
+      };
+    }
+
+    if (props.size === "small") {
+      return {
+        borderRadius: borderRadius.default,
+        fontSize: "1.5rem",
+        height: "6rem",
+        padding: "0 3rem",
+        ...bgColor,
+      };
+    }
+
+    return {
+      borderRadius: borderRadius.large,
+      ...bgColor,
     };
   }
 );
