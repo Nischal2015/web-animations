@@ -25,6 +25,8 @@ body {
   box-sizing: inherit;
   line-height: 1;
   font-family: "Montserrat", sans-serif;
+  background: #0a064c;
+  color: #fff;
 }
 
 h1 {
@@ -39,4 +41,8 @@ h2 {
   font-size: 3.4rem;
   line-height: 1.2;
   font-weight: 500;
+}
+
+h3 {
+  font-size: 4.4rem;
 }
