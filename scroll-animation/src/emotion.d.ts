@@ -35,5 +35,10 @@ declare module "@emotion/react" {
       smaller: string;
       smallest: string;
     };
+    borderRadius: {
+      large: string;
+      default: string;
+      small: string;
+    };
   }
 }

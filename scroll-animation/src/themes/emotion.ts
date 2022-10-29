@@ -33,4 +33,9 @@ export const theme: Theme = {
     smaller: "1.6rem",
     smallest: "2.4rem",
   },
+  borderRadius: {
+    large: "16px",
+    default: "8px",
+    small: "4px",
+  },
 };
