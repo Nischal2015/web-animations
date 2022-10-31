@@ -121,8 +121,13 @@ export default function Review() {
               right: -120,
               left: -(width - window.innerWidth + containerOffset + 1.5 * 120),
             }}
-            dragElastic={0.25}
-            dragTransition={{ bounceStiffness: 250, bounceDamping: 50 }}
+            dragElastic={0.1}
+            dragTransition={{
+              bounceStiffness: 1000,
+              bounceDamping: 300,
+              power: 0.02,
+              timeConstant: 100,
+            }}
             ref={ref}
           >
             {reshapedMockedDatas.map((data) => (
