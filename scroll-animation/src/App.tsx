@@ -1,13 +1,20 @@
-import { Navbar } from "./layouts";
-import { Advantage, Hero } from "./components";
+import { lazy, Suspense } from "react";
+
+const Advantage = lazy(() => import("./components/sections/advantage"));
+const Hero = lazy(() => import("./components/sections/hero"));
+const Navbar = lazy(() => import("./layouts/navbar"));
+const Review = lazy(() => import("./components/sections/review"));
 
 function App() {
   return (
-    <div className='App'>
-      <Navbar />
-      <Hero />
-      <Advantage />
-    </div>
+    <Suspense fallback={<div>Loading...</div>}>
+      <div className='App'>
+        <Navbar />
+        <Hero />
+        <Advantage />
+        <Review />
+      </div>
+    </Suspense>
   );
 }
 

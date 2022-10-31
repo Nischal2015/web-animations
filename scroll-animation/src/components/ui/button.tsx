@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { motion } from "framer-motion";
 import { ElementType } from "react";
 import { PolymorphicComponentProp } from "./types";
 
@@ -7,7 +8,7 @@ type ButtonProps = {
   color?: "primary" | "secondary" | "white";
 };
 
-const StyledButton = styled.button<ButtonProps>(
+const StyledButton = styled(motion.button)<ButtonProps>(
   {
     display: "inline-block",
     border: "none",
@@ -66,8 +67,13 @@ export const Button = <C extends ElementType = "button">({
   children,
 }: PolymorphicComponentProp<C, ButtonProps>) => {
   return (
-    <StyledButton size={size} color={color}>
-      {children}
+    <StyledButton
+      size={size}
+      color={color}
+      whileHover={{ scale: 1.1, transition: { type: "spring", bounce: 0.4 } }}
+      whileTap={{ scale: 0.95, transition: { type: "spring", bounce: 0.4 } }}
+    >
+      <span>{children}</span>
     </StyledButton>
   );
 };
