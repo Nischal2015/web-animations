@@ -5,9 +5,9 @@ import { motion, useScroll } from "framer-motion";
 import { useParallax } from "../../hooks";
 import { Button } from "../ui";
 import appleStoreBtn from "../../assets/hero/apple-store-btn.svg";
-import hero1 from "/src/assets/hero/hero-1.png";
-import hero2 from "/src/assets/hero/hero-2.png";
-import hero3 from "/src/assets/hero/hero-3.png";
+import hero1 from "/src/assets/hero/hero-1.avif";
+import hero2 from "/src/assets/hero/hero-2.avif";
+import hero3 from "/src/assets/hero/hero-3.avif";
 
 type URL = {
   url: string;

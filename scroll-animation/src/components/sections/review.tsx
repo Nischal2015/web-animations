@@ -5,15 +5,15 @@ import { Container, Section } from "../../layouts";
 import { Card } from "../composite";
 import mockReviews from "../../data/mockReviews.json";
 
-import avatar1 from "../../assets/review/avatar-1.jpg";
-import avatar2 from "../../assets/review/avatar-2.jpg";
-import avatar3 from "../../assets/review/avatar-3.jpg";
-import avatar4 from "../../assets/review/avatar-4.jpg";
-import avatar5 from "../../assets/review/avatar-5.jpg";
-import avatar6 from "../../assets/review/avatar-6.jpg";
-import avatar7 from "../../assets/review/avatar-7.jpg";
-import avatar8 from "../../assets/review/avatar-8.jpg";
-import avatar9 from "../../assets/review/avatar-9.jpg";
+import avatar1 from "../../assets/review/avatar-1.avif";
+import avatar2 from "../../assets/review/avatar-2.avif";
+import avatar3 from "../../assets/review/avatar-3.avif";
+import avatar4 from "../../assets/review/avatar-4.avif";
+import avatar5 from "../../assets/review/avatar-5.avif";
+import avatar6 from "../../assets/review/avatar-6.avif";
+import avatar7 from "../../assets/review/avatar-7.avif";
+import avatar8 from "../../assets/review/avatar-8.avif";
+import avatar9 from "../../assets/review/avatar-9.avif";
 import { useLayoutEffect, useRef, useState } from "react";
 
 const CardContainer = styled(motion.div)(
