@@ -1,9 +1,10 @@
-import { lazy, Suspense } from "react";
+import { Suspense, lazy } from "react";
 
 const Advantage = lazy(() => import("./components/sections/advantage"));
 const Hero = lazy(() => import("./components/sections/hero"));
 const Navbar = lazy(() => import("./layouts/navbar"));
 const Review = lazy(() => import("./components/sections/review"));
+const More = lazy(() => import("./components/sections/more"));
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Hero />
         <Advantage />
         <Review />
+        <More />
       </div>
     </Suspense>
   );
