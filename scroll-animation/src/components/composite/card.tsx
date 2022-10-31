@@ -16,6 +16,11 @@ const ReviewContainer = styled(motion.div)(
   {
     width: "358px",
     border: "2px solid #ffffff33",
+    transition: "250ms all ease-in-out",
+    cursor: "pointer",
+    "&:hover": {
+      transform: "scale(1.1)",
+    },
   },
   (props) => ({
     borderRadius: props.theme.borderRadius.larger,
@@ -61,13 +66,7 @@ export default function Card({
   const $root = document.getElementById("root") as HTMLElement;
 
   return (
-    <ReviewContainer
-      whileHover={{
-        scale: 1.1,
-        cursor: "pointer",
-        transition: { duration: 0.25, ease: "easeInOut" },
-      }}
-    >
+    <ReviewContainer>
       <ReviewBody>
         <Avatar imageUrl={imageUrl} country={country} name={name} />
         <ReviewItemContainer>
