@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import dummyAvatar from "../../assets/review/avatar-9.jpg";
+import dummyAvatar from "../../assets/review/avatar-9.avif";
 
 type AvatarProps = {
   imageUrl?: string;
