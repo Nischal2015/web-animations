@@ -91,7 +91,7 @@ export default function Advantage() {
   };
 
   return (
-    <Section ref={ref}>
+    <Section ref={ref} background='primary'>
       <Container>
         <AdvantageContainer
           variants={cardVariant}

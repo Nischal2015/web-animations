@@ -55,7 +55,7 @@ export default function More() {
     );
 
   return (
-    <Section ref={ref}>
+    <Section ref={ref} background='primary'>
       <MoreTitle>
         <h2>
           Over 250+ sleep sounds, stories & meditations to help you{" "}

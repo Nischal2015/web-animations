@@ -100,7 +100,7 @@ export default function Review() {
   }, []);
 
   return (
-    <Section>
+    <Section background='primary'>
       <ReviewContent>
         <Container>
           <TitleDiv
