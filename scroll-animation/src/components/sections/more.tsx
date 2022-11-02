@@ -1,9 +1,10 @@
 import styled from "@emotion/styled";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { featureAnimationVariant } from "../../data";
 import { Section } from "../../layouts";
+import { useInView } from "../../hooks";
 
-const MoreTitle = styled.div((props) => ({
+const MoreTitle = styled(motion.div)((props) => ({
   textAlign: "center",
   margin: "0 auto 177px",
   maxWidth: "758px",
@@ -45,7 +46,7 @@ const ImageSpan = styled.span<{ url: string }>((props) => ({
 }));
 
 export default function More() {
-  const ref = useRef<HTMLDivElement>(null);
+  const { ref, isInView } = useInView(0.35, true);
   const { scrollY } = useScroll({ target: ref });
 
   const scrollYAmount = (positiveX: 1 | -1 = 1) =>
@@ -56,7 +57,11 @@ export default function More() {
 
   return (
     <Section ref={ref} background='primary'>
-      <MoreTitle>
+      <MoreTitle
+        variants={featureAnimationVariant}
+        initial='initial'
+        animate={isInView ? "animate" : "none"}
+      >
         <h2>
           Over 250+ sleep sounds, stories & meditations to help you{" "}
           <span>sleep better</span>

@@ -24,7 +24,7 @@ const ImageSpan = styled.span({
   borderRadius: "50%",
   overflow: "hidden",
   "& img": {
-    height: "100%",
+    height: "auto",
     width: "100%",
   },
 });
