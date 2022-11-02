@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import { nanoid } from "nanoid";
-import { motion, useInView, Variants } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { Container, Section } from "../../layouts";
 import { Card } from "../composite";
 import mockReviews from "../../data/mockReviews.json";
@@ -15,6 +15,7 @@ import avatar7 from "../../assets/review/avatar-7.avif";
 import avatar8 from "../../assets/review/avatar-8.avif";
 import avatar9 from "../../assets/review/avatar-9.avif";
 import { useLayoutEffect, useRef, useState } from "react";
+import { useInView } from "../../hooks";
 
 const CardContainer = styled(motion.div)(
   {
@@ -49,9 +50,7 @@ export default function Review() {
   const [containerOffset, setContainerOffset] = useState(0);
 
   const ref = useRef<HTMLDivElement>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  const isInView = useInView(containerRef, { amount: 0.8, once: true });
+  const { ref: containerRef, isInView } = useInView(0.8, true);
 
   const avatars = [
     avatar1,
@@ -100,7 +99,7 @@ export default function Review() {
   }, []);
 
   return (
-    <Section>
+    <Section background='primary'>
       <ReviewContent>
         <Container>
           <TitleDiv
