@@ -23,7 +23,7 @@ import particle32 from "/src/assets/feature/particle32.png";
 import particle33 from "/src/assets/feature/particle33.png";
 
 export default function Feature() {
-  const { ref, isInView } = useInView(0.55, true);
+  const { ref, isInView } = useInView(0.4, true);
   const { heightRange: y } = useFeatureScroll({
     ref,
     amount: 1.6,
@@ -37,7 +37,7 @@ export default function Feature() {
       <Container>
         <FeatureContent>
           <FeatureGrid
-            initial='intial'
+            initial='initial'
             variants={featureAnimationVariant}
             animate={isInView ? "animate" : "none"}
           >
