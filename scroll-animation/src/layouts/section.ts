@@ -11,5 +11,5 @@ export const Section = styled.section<{
 }>((props) => ({
   backgroundColor: props.background
     ? props.theme.background[props.background]
-    : props.theme.background.primary,
+    : "none",
 }));

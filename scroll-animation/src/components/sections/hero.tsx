@@ -5,6 +5,9 @@ import { motion, useScroll } from "framer-motion";
 import { useParallax } from "../../hooks";
 import { Button } from "../ui";
 import appleStoreBtn from "../../assets/hero/apple-store-btn.svg";
+import hero1 from "/src/assets/hero/hero-1.avif";
+import hero2 from "/src/assets/hero/hero-2.avif";
+import hero3 from "/src/assets/hero/hero-3.avif";
 
 type URL = {
   url: string;
@@ -93,7 +96,7 @@ export default function Hero() {
             damping: 30,
           }}
         >
-          <HeroBgItemSpan url='src/assets/hero/hero-1.png' />
+          <HeroBgItemSpan url={hero1} />
         </HeroBgItem>
         <HeroBgItem
           layout
@@ -107,10 +110,10 @@ export default function Hero() {
             damping: 30,
           }}
         >
-          <HeroBgItemSpan url='src/assets/hero/hero-2.png' />
+          <HeroBgItemSpan url={hero2} />
         </HeroBgItem>
         <HeroBgItem>
-          <HeroBgItemSpan url='src/assets/hero/hero-3.png' />
+          <HeroBgItemSpan url={hero3} />
         </HeroBgItem>
       </HeroBgContainer>
       <HeroContentContainer>

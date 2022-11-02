@@ -22,11 +22,12 @@ html {
 }
 
 body {
-  box-sizing: inherit;
+  box-sizing: border-box;
   line-height: 1;
   font-family: "Montserrat", sans-serif;
   background: #0a064c;
   color: #fff;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -45,4 +46,35 @@ h2 {
 
 h3 {
   font-size: 4.4rem;
+}
+
+::-webkit-scrollbar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 10px;
+  height: 100%;
+  transform-origin: center right;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  transform: scale(1.45);
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ffffff55;
+}
+
+::-webkit-scrollbar-thumb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #201260;
+  opacity: 0.5;
+  width: 7px;
+  border-radius: 10px;
+  margin: 2px;
+  cursor: -webkit-grab;
+  cursor: grab;
 }

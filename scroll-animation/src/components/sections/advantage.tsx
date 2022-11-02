@@ -1,11 +1,11 @@
-import { useRef } from "react";
 import styled from "@emotion/styled";
 import { Container, Section } from "../../layouts";
 import adv1 from "../../assets/advantage/adv-1.png";
 import adv2 from "../../assets/advantage/adv-2.png";
 import adv3 from "../../assets/advantage/adv-3.png";
-import { motion, Variants, useInView } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { Button } from "../ui";
+import { useInView } from "../../hooks";
 
 const AdvantageContainer = styled(motion.div)({
   padding: "22.4rem 0 16.4rem",
@@ -58,8 +58,7 @@ const ButtonContainer = styled(motion.div)({
 });
 
 export default function Advantage() {
-  const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { amount: 0.4, once: true });
+  const { ref, isInView } = useInView(0.4, true);
 
   const cardVariant: Variants = {
     hide: {},
@@ -91,7 +90,7 @@ export default function Advantage() {
   };
 
   return (
-    <Section ref={ref}>
+    <Section ref={ref} background='primary'>
       <Container>
         <AdvantageContainer
           variants={cardVariant}

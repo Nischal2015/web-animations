@@ -3,7 +3,7 @@ import { Theme } from "@emotion/react";
 export const theme: Theme = {
   colors: {
     primary: "#f6583e",
-    secondary: "#471fac",
+    secondary: "#6c38ef",
     gray: "#8881ab",
     white: "#fff",
   },
@@ -34,6 +34,7 @@ export const theme: Theme = {
     small: "2.4rem",
   },
   borderRadius: {
+    larger: "24px",
     large: "16px",
     default: "8px",
     small: "4px",
