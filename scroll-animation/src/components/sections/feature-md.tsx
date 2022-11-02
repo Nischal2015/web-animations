@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { featureAnimationVariant } from "../../data";
+import { useFeatureScroll, useInView } from "../../hooks";
 import {
   Container,
   FeatureBody,
@@ -6,7 +8,9 @@ import {
   FeatureDescription,
   FeatureGrid,
   FeatureImage,
+  FeatureImageParticle,
   FeatureImageSpan,
+  FeatureParticle,
   FeatureTitle,
   ImageDiv,
   Section,
@@ -14,13 +18,28 @@ import {
 import { Button } from "../ui";
 
 import device2 from "/src/assets/feature/device-2.avif";
+import particle21 from "/src/assets/feature/particle21.png";
+import particle22 from "/src/assets/feature/particle22.png";
 
 export default function FeatureMd() {
+  const { isInView, ref } = useInView(0.5, true);
+  const { heightRange: y } = useFeatureScroll({
+    ref,
+    amount: 1.4,
+    scrollSpeed: 1.4,
+  });
+
+  const opacity = { opacity: 0 };
+
   return (
-    <Section>
+    <Section ref={ref}>
       <Container>
         <FeatureContent featureMd>
-          <FeatureGrid>
+          <FeatureGrid
+            initial='initial'
+            variants={featureAnimationVariant}
+            animate={isInView ? "animate" : "none"}
+          >
             <div>
               <FeatureBody>
                 <FeatureTitle>
@@ -46,7 +65,35 @@ export default function FeatureMd() {
             </div>
             <ImageDiv>
               <FeatureImage>
-                <FeatureImageSpan url={device2} />
+                <FeatureImageParticle>
+                  <FeatureParticle
+                    width={110}
+                    height={110}
+                    top={10}
+                    right={-160}
+                    initial={{ x: "-200%", y: "200%", rotate: -60, ...opacity }}
+                    variants={featureAnimationVariant}
+                    animate={isInView ? "animate" : "none"}
+                  >
+                    <img src={particle21} alt='particle music' />
+                  </FeatureParticle>
+                  <FeatureParticle
+                    width={175}
+                    height={185}
+                    left={-203}
+                    bottom={-40}
+                    initial={{ x: "100%", y: "-100%", rotate: 90, ...opacity }}
+                    variants={featureAnimationVariant}
+                    animate={isInView ? "animate" : "none"}
+                  >
+                    <img src={particle22} alt='particle mountain' />
+                  </FeatureParticle>
+                </FeatureImageParticle>
+                <FeatureImageSpan
+                  url={device2}
+                  initial={{ y: 80 }}
+                  style={{ y }}
+                />
               </FeatureImage>
             </ImageDiv>
           </FeatureGrid>
